@@ -6,12 +6,41 @@
     <title>Tebak Gambar - Administrator</title>
 </head>
 <body>
-    
+    <header class="navBar">
+        <!-- Logo Games, ditaruh di center -->
+        <img src="">
+   </header>
+   <!-- div page 1 isi game dan card-->
+   <div> 
+       <!-- class navpage1 untuk mendesain background navigation -->
+       <div class="navPage1">
+           <!-- untuk mebuat card nya bisa bergeser -->
+           <div class="cards">
+                <ul class="image-list"></ul>
 
+               <div class="card1">
+                   <!-- masukkan foto gambar yang sudah di munculkan -->
+                   <img src="" />
+                </div>
+                <div>
+                   <!-- membuat tempat untuk mengisi jawaban dan bisa di enter -->
+                        <label for="jawaban">Jawaban Anda:</label>
+                        <input type="text" id="jawaban" placeholder="ketik disini..."/>
+
+                        <button onclick="add()">Daftar</button>
+                        <!-- <input type="submit" value="Submit"> -->
+               </div>
+           </div>
+       </div>
+   </div>
+
+
+   <p class="test"></p>
 
     <!-- ambil data -->
-    <script type="text/javascript" src="./assets/javascript/data/gambar.js"></script>
-    <script type="module" src="./assets/javascript/script/crud.js"></script>
+    <script src="./assets/javascript/data/gambar.js"></script>
+    <script src="./assets/javascript/script/crud.js"></script>
+    <script src="./assets/javascript/script/render.js"></script>
 
 </body>
 </html>
