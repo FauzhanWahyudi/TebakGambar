@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main Game</title>
+    <link rel="stylesheet" href="./style2.css">
+    <style>
+
+        .container {
+            text-align: center;
+        }
+
+        /* Memusatkan cards dan elemen-elemen lainnya */
+        .cards {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .card1, .card2, .card3 {
+            margin: 0 10px;
+        }
+
+        /* Styling input */
+        input[type="text"] {
+            padding: 10px;
+            width: 80%;
+            margin-bottom: 20px;
+        }
+
+        /* Styling button */
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Container untuk memusatkan semua elemen -->
+    <div class="container">
+        <!-- class "navBar" untuk bikin navigation bar dan desain judul serta logo -->
+        <header class="navBar">
+            <!-- Logo Games, ditaruh di center -->
+            <img src="./fotoTebakGambar/Logo.png" alt="Logo Game">
+        </header>
+
+        <!-- page 2 main game, didesain dengan isi jawaban, random foto dan button kumpulin -->
+        <div>
+            <!-- class "cards" untuk mendesain background navigation page 1 & membuat card nya bisa bergeser -->
+            <div class="cards">
+                <!-- class="card" untuk membuat desain background dan hias perCardnya -->
+                <div class="card1">
+                    <!-- masukkan foto gambar yang sudah dimunculkan -->
+                    <img src="./fotoTebakGambar/jambi.jpg" alt="Tebak Gambar 1">
+                </div>
+                <div class="card2">
+                    <!-- masukkan foto gambar yang sudah dimunculkan -->
+                    <img src="./fotoTebakGambar/surabaya.jpg" alt="Tebak Gambar 2">
+                </div>
+                <div class="card3">
+                    <!-- masukkan foto gambar yang sudah dimunculkan -->
+                    <img src="./fotoTebakGambar/tasik.jpg" alt="Tebak Gambar 3">
+                </div>
+            </div>
+            <div>
+                <!-- input untuk isi jawaban -->
+                <input type="text" id="isiJwb" placeholder="Isi disini...">
+            </div>
+            <div>
+                <!-- button untuk submit jawaban -->
+                <button type="button">Done</button>
+            </div>
+        </div>
+    </div>
+
+    <ul id="leaderboard">
+
+    </ul>
+
+    <script src="./assets/javascript/data/pemain.js"></script>
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tebak Gambar - Administrator</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<!-- buat warna background untuk boddy -->
+<body>  
+    <!-- class "navBar" untuk bikin navigation bar dan desain judul serta logo -->
+    <header class="navBar">
+         <!-- Logo Games, ditaruh di center -->
+         <img id="foto" src="./fotoTebakGambar/Logo.png">
+    </header>
+    <!-- div page 1 isi game dan card-->
+    <div> 
+        <!-- class "cards" untuk mendesain background navigation page 1 && mebuat card nya bisa bergeser -->
+        <div class="cards">
+            <!-- class="card" untuk membuat desain background dan hias perCardnya -->
+            <!-- <div class="card"> -->
+                <!-- masukkan foto gambar yang sudah di munculkan -->
+                <!-- <img src="./fotoTebakGambar/jambi.jpg" /> -->
+                <!-- navText untuk hias text output -->
+                <!-- <h3 class="navText">Kucing</h3> -->
+            <!-- </div> -->
+        </div>
+
+        <!-- button mulai game dan akan pindah ke page2 -->
+        <div class="play">
+            <button><a href="./page2.html">PLay</a></button>
+        </div>
+  
+  <!-- ____________________________________Navigation______________________________________-->
+        <!-- class navUpdate untuk membuat navigation edit isi dan delete -->
+        <div class="navigation">
+        <!-- untuk membuat button ketika mau edit dan delete di taruh dipage 1 -->
+        <div class="navigationIcon" onclick="navigationBar();">
+            <img src="">
+        </div>
+        <div class="navigationBar">
+            <div>
+                <label for="url">Url Anda:</label>
+                <input type="text" id="url" placeholder="ketik disini..."/>
+
+                <label for="jwb">Jawaban Anda:</label>
+                <input type="text" id="jwb" placeholder="ketik disini..."/>
+            </div>
+            <div>
+                <!-- button untuk add -->
+                <button id="addButton" onclick="create()" >Add</button>
+            </div>
+            <div>
+                <!-- button untuk edit -->
+                <button id="editButton" onclick="simpanEdit()" style="display: none;" >Simpan Edit</button>
+            </div>
+            <div>
+                <!-- button untuk delete jawaban -->
+                <!-- <button type="button" >Delete</button> -->
+            <!-- </div> -->
+            <!-- <div> -->
+                <!-- text untuk edit jawaban -->
+                <!-- <input type="text" id="editJwb" placeholder="Edit Jawaban" /> -->
+            <!-- </div> -->
+        <!-- </div>  -->
+
+        <div class="navigationBar">
+            <div>
+                <label for="url">Url Anda:</label>
+                <input type="text" id="url" placeholder="ketik disini..."/>
+
+                <label for="jwb">Jawaban Anda:</label>
+                <input type="text" id="jwb" placeholder="ketik disini..."/>
+            </div>
+            <div>
+                <!-- button untuk add -->
+                <button id="addButton" onclick="create()" >Add</button>
+            </div>
+            <div>
+                <!-- button untuk edit -->
+                <button id="editButton" onclick="simpanEdit()" style="display: none;" >Simpan Edit</button>
+            </div>
+    </div>
+    <!-- ambil data -->
+    <script src="./assets/javascript/data/gambar.js"></script>
+    <script src="./assets/javascript/script/crud.js"></script>
+
+</body>
+</html>
