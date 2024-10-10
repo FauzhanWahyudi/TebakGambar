@@ -41,6 +41,7 @@ function sortRank(array){
     result.sort((a, b) => b.point - a.point); //sort
     localStorage.setItem('pemain', JSON.stringify(result));
     pemain = [...result]
+    return result;
 }
 
 sortRank(pemain)
@@ -79,7 +80,7 @@ function renderNextImage(id) {
         //cari id
         if(array[x].id === id){
             displayImage.innerHTML +=`
-                <div class="card">
+                <div style=" margin: 0 10px;">
                     <!-- masukkan foto gambar yang sudah dimunculkan -->
                     <img src="${array[x].src}" alt="${array[x].id}">
                 </div>
@@ -89,7 +90,41 @@ function renderNextImage(id) {
 }
 
 function clickDone(){
-    let imageId = document.querySelector('.card')
+    let image = document.querySelector('.cards div img')
+    let id = image.alt;
+    let imageJwb;
+    let jawabanUser = document.querySelector('#isiJwb');
+    let isiJawabanUser = jawabanUser.value;
 
 
+    // console.log(id)
+
+    //cari id di gambar
+    let storageImage = JSON.parse(localStorage.getItem('gambar'))
+    // console.log(storageImage)
+    for(let item of storageImage){
+        if(item.id == id){
+            imageJwb = item.jwb
+            break;
+        }
+    }
+    if (imageJwb !== isiJawabanUser){
+        //kalo salah
+        jawabanUser.value = "SALAH !!! Coba Lagi"
+    } else {
+        jawabanUser.value = "BENAR !!! Good Job"
+        let pemain = document.querySelector('h2')
+        let namaPemain = pemain.title;
+        // console.log(pemain.title) //akbar
+
+
+        //cari pemain di data
+        let storagePemain = JSON.parse(localStorage.getItem('pemain'))
+        let pemainIndex = storagePemain.findIndex(obj => obj.name == namaPemain);
+        storagePemain[pemainIndex].point += 1000;
+        
+        sortRank(storagePemain);
+        renderLeaderboard(sortRank(storagePemain));
+    }
+    // console.log(pemain) //IOT aaa
 }

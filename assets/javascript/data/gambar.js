@@ -21,7 +21,6 @@ let gambar = [
     },
 ]
 
-// localStorage.setItem('gambar', JSON.stringify(gambar))
 
 let imagesList = document.querySelector('.cards')
 let storageImage = JSON.parse(localStorage.getItem('gambar'))
@@ -51,8 +50,10 @@ function render(array) {
 }
 
 if(storageImage === null){
+    localStorage.setItem('gambar', JSON.stringify(gambar))
     render(gambar)
 } else {
+    localStorage.setItem('gambar', JSON.stringify(storageImage))
     render(storageImage);
 }
 
