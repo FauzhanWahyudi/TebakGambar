@@ -1,6 +1,36 @@
 let dataGambar = gambar;
 // console.log(dataGambar)
 
+
+
+/* CREATE FUNCTION */
+function create() {
+    let url = document.getElementById('url');
+    let urlValue = url.value;
+    console.log(urlValue);
+
+    let jwbValue = document.getElementById('jwb').value;
+    console.log(jwbValue);
+
+    let newId = dataGambar.length !== 0 ? dataGambar[dataGambar.length - 1].id + 1 : 1;
+    
+    let obj = {
+        id: newId,
+        url : urlValue,
+        jwb : jwbValue
+    };
+
+    console.log(obj);
+    
+    dataGambar.push(obj);
+    console.log(dataGambar);
+
+    url.value = ""
+    // reRender(dataGambar)
+}
+
+/*><><><><><><><><><><><><><><><><><><><><><><<><><><><><><><><*/
+
 //to obtain data from class
 function getDataFromInput(classInput) {
     let data = document.getElementById(classInput).value;
