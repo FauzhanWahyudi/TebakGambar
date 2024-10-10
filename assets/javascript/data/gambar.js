@@ -23,7 +23,7 @@ let gambar = [
 
 // localStorage.setItem('gambar', JSON.stringify(gambar))
 
-let imagesList = document.querySelector('.imageDisplay')
+let imagesList = document.querySelector('.cards')
 let storageImage = JSON.parse(localStorage.getItem('gambar'))
 
 function render(array) {
@@ -32,15 +32,19 @@ function render(array) {
         let perGambar = array[x];
         imagesList.innerHTML +=`
             <div class="card">
-                <!-- masukkan foto gambar yang sudah di munculkan -->
-                <img src=${perGambar.url} />
-                <!-- navText untuk hias text output -->
-                <h3 class="navText">${perGambar.jwb}</h3>
+                <div>
+                    <!-- masukkan foto gambar yang sudah di munculkan -->
+                    <button onclick="clickEdit(${perGambar.id})" style="background-color: white;"><img src=${perGambar.url} /></button>
+                </div>
+
+                <div>
+                    <!-- navText untuk hias text output -->
+                    <h3 class="navText">${perGambar.jwb}</h3>
+                </div>
               
-            </div>
-            <div>
-            <button onclick="clickEdit(${perGambar.id})">Edit this Quiz</button>
-            <button onclick="deleteData(${perGambar.id})" >Delete</button>
+                <div>
+                    <button onclick="deleteData(${perGambar.id})" >Delete</button>
+                </div>
             </div>
         `
     }
