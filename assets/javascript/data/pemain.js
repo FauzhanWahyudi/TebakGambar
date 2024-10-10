@@ -38,17 +38,6 @@ let pemain = [
 
 function sortRank(array){
     let result = [...array];
-    //ambil saat ini hingga sebelum terakhir
-    // for(let x = 0; x < result.length - 1; x++){
-    //     //ambil setelah ini hingga akhir
-    //     for(let y = x + 1; y < result.length; y++){
-    //         if(result[x].point < result[y].point){
-    //             l[et temp = result[x];
-    //             result[x] = result[y];
-    //             result[y] = temp;]
-    //         }
-    //     }
-    // }
     result.sort((a, b) => b.point - a.point); //sort
     localStorage.setItem('pemain', JSON.stringify(result));
     pemain = [...result]
@@ -56,7 +45,7 @@ function sortRank(array){
 
 sortRank(pemain)
 
-
+//RENDER LEADERBOARD ------------------------------------
 let leaderboard = document.querySelector('#leaderboard')
 let storagePemain = JSON.parse(localStorage.getItem('pemain'))
 
@@ -80,4 +69,27 @@ if(storagePemain === null){
     renderLeaderboard(pemain)
 } else {
     renderLeaderboard(storagePemain);
+}
+
+//RENDER IMAGE FOR PLAY ------------------------------------
+let displayImage = document.querySelector('.cards')
+function renderNextImage(id) {
+    displayImage.innerHTML = "";
+    for (let x = 0; x < array.length; x++){
+        //cari id
+        if(array[x].id === id){
+            displayImage.innerHTML +=`
+                <div class="card">
+                    <!-- masukkan foto gambar yang sudah dimunculkan -->
+                    <img src="${array[x].src}" alt="${array[x].id}">
+                </div>
+            `
+        }
+    }
+}
+
+function clickDone(){
+    let imageId = document.querySelector('.card')
+
+
 }

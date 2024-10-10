@@ -6,17 +6,17 @@ let gambar = [
     },
     {
         id: 2,
-        url: "./fotoTebakGambar/output1.jpg",
+        url: "./fotoTebakGambar/jambi.jpg",
         jwb : "Kucing"
     },
     {
         id: 3,
-        url: "./fotoTebakGambar/output2.jpg",
+        url: "./fotoTebakGambar/surabaya.jpg",
         jwb : "Monyet"
     },
     {
         id: 4,
-        url: "./fotoTebakGambar/output3.jpg",
+        url: "./fotoTebakGambar/tasik.jpg",
         jwb : "Gorila"
     },
 ]
