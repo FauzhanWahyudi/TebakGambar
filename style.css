@@ -1,4 +1,4 @@
-/* Reset beberapa elemen dasar */
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -7,12 +7,12 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #f0f0f0; /* Warna latar belakang */
+    background-color: #c4e4ff ; /* Warna latar belakang */
 }
 
 /* Desain untuk navigation bar (header) tetap kecil */
 .navBar {
-    background-color: #e72e1e;
+    background-color:blue;
     padding: 10px 0;
     text-align: center;
     height: 100px; /* Tetapkan tinggi navbar tetap */
@@ -32,11 +32,11 @@ body {
     display: flex;
     overflow-x: auto; /* Membuat kartu bisa digeser secara horizontal */
     padding: 20px;
-    margin: 20px auto; /* Mengatur margin otomatis untuk memusatkan */
+    margin: 20px auto; /* Memusatkan div */
     border-radius: 10px;
-    background:brown;
+    background: rgb(255, 204, 204);
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    max-width: 600px; /* Lebar maksimum */
+    max-width: 400px; /* Lebar maksimum untuk menampilkan satu kartu */
     width: 100%; /* Lebar 100% untuk responsif */
 }
 
@@ -44,7 +44,7 @@ body {
 .card1, .card2, .card3 {
     min-width: 200px; /* Lebar minimum untuk kartu */
     height: 250px; /* Tinggi kartu */
-    background-color: #ffffff; /* Warna hijau */
+    background-color: #ffffff;
     color: white;
     border-radius: 8px;
     display: flex;
@@ -75,7 +75,7 @@ body {
 }
 
 button {
-    background-color: #4CAF50; /* Warna hijau */
+    background-color: #d6589f; 
     color: white;
     border: none;
     border-radius: 5px;
@@ -86,7 +86,7 @@ button {
 }
 
 button:hover {
-    background-color: #45a049; /* Warna hijau gelap saat hover */
+    background-color: #d20062; 
 }
 
 /* Styling untuk navigation */
