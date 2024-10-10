@@ -1,0 +1,100 @@
+/* Reset dasar untuk menghindari margin dan padding yang tidak diinginkan */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Gaya untuk seluruh body */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+/* Gaya untuk header */
+.navBar {
+    background-color: #007bff; /* Warna biru */
+    padding: 20px;
+    text-align: center;
+}
+
+/* Gaya untuk logo dalam header */
+.navBar img {
+    max-width: 150px; /* Atur ukuran maksimum logo */
+}
+
+/* Gaya untuk div navPage1 */
+.navPage1 {
+    margin: 20px auto;
+    padding: 20px;
+    width: 90%;
+    max-width: 800px; /* Maksimal lebar untuk konten */
+    background-color: white; /* Latar belakang putih */
+    border-radius: 8px; /* Sudut melengkung */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Bayangan lembut */
+}
+
+/* Gaya untuk card */
+.cards {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Pusatkan konten di dalam card */
+    margin-bottom: 20px; /* Jarak di bawah card */
+}
+
+/* Gaya untuk daftar gambar */
+.image-list {
+    list-style: none; /* Menghilangkan bullet */
+    padding: 0; /* Menghilangkan padding */
+}
+
+/* Gaya untuk setiap card gambar */
+.card1 {
+    margin-bottom: 20px; /* Jarak antara card */
+    display: flex;
+    justify-content: center; /* Pusatkan gambar */
+    width: 100%; /* Lebar penuh */
+}
+
+/* Gaya untuk gambar dalam card */
+.card1 img {
+    max-width: 100%; /* Gambar responsif */
+    height: auto; /* Tinggi otomatis */
+    border-radius: 8px; /* Sudut melengkung pada gambar */
+}
+
+/* Gaya untuk label dan input */
+label {
+    display: block; /* Membuat label di atas input */
+    margin-bottom: 10px; /* Jarak di bawah label */
+    font-weight: bold; /* Membuat teks label lebih tebal */
+}
+
+input[type="text"] {
+    width: calc(100% - 20px); /* Lebar input */
+    padding: 10px; /* Padding di dalam input */
+    border: 1px solid #ccc; /* Border abu-abu */
+    border-radius: 4px; /* Sudut melengkung pada input */
+    margin-bottom: 10px; /* Jarak di bawah input */
+}
+
+/* Gaya untuk tombol */
+button {
+    background-color: #28a745; /* Warna hijau */
+    color: white; /* Teks putih */
+    border: none; /* Tanpa border */
+    padding: 10px 15px; /* Padding tombol */
+    border-radius: 4px; /* Sudut melengkung pada tombol */
+    cursor: pointer; /* Ubah kursor saat hover */
+}
+
+button:hover {
+    background-color: #218838; /* Warna hijau gelap saat hover */
+}
+
+/* Gaya untuk paragraf dengan class test */
+.test {
+    margin-top: 20px; /* Jarak di atas paragraf */
+    font-size: 18px; /* Ukuran font */
+}
