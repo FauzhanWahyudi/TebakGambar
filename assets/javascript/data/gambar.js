@@ -36,6 +36,11 @@ function render(array) {
                 <img src=${perGambar.url} />
                 <!-- navText untuk hias text output -->
                 <h3 class="navText">${perGambar.jwb}</h3>
+              
+            </div>
+            <div>
+            <button onclick="clickEdit(${perGambar.id})">Edit this Quiz</button>
+            <button onclick="deleteData(${perGambar.id})" >Delete</button>
             </div>
         `
     }
