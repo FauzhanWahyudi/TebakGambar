@@ -7,23 +7,23 @@ let gambar = [
     {
         id: 2,
         url: "./fotoTebakGambar/jambi.jpg",
-        jwb : "Kucing"
+        jwb : "Jambi"
     },
     {
         id: 3,
         url: "./fotoTebakGambar/surabaya.jpg",
-        jwb : "Monyet"
+        jwb : "Surabaya"
     },
     {
         id: 4,
         url: "./fotoTebakGambar/tasik.jpg",
-        jwb : "Gorila"
+        jwb : "Tasik"
     },
 ]
 
 // localStorage.setItem('gambar', JSON.stringify(gambar))
 
-let imagesList = document.querySelector('.cards')
+let imagesList = document.querySelector('.card-body')
 let storageImage = JSON.parse(localStorage.getItem('gambar'))
 
 function render(array) {
@@ -34,7 +34,7 @@ function render(array) {
             <div class="card">
                 <div>
                     <!-- masukkan foto gambar yang sudah di munculkan -->
-                    <button onclick="clickEdit(${perGambar.id})" style="background-color: white;"><img src=${perGambar.url} /></button>
+                    <button onclick="clickEdit(${perGambar.id})" style="background-color: white;"><img src=${perGambar.url} style="max-height:150px;max-width:150px"/></button>
                 </div>
 
                 <div>

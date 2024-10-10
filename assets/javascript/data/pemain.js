@@ -72,7 +72,7 @@ if(storagePemain === null){
 }
 
 //RENDER IMAGE FOR PLAY ------------------------------------
-let displayImage = document.querySelector('.cards')
+let displayImage = document.querySelector('.card-body')
 function renderNextImage(id) {
     displayImage.innerHTML = "";
     for (let x = 0; x < array.length; x++){

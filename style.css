@@ -8,11 +8,17 @@
 body {
     font-family: Arial, sans-serif;
     background-color: #c4e4ff ; /* Warna latar belakang */
+    background-image: url(./fotoTebakGambar/bgBody.png);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 /* Desain untuk navigation bar (header) tetap kecil */
 .navBar {
-    background-color:blue;
+    background-color:hsla(240, 100%, 50%, 0.129);
+    background-image: url(./fotoTebakGambar/222.png);
+    box-shadow: 4px  -2px 11px 1px #633617;
+    border-bottom: #633617 1px solid;
     padding: 10px 0;
     text-align: center;
     height: 100px; /* Tetapkan tinggi navbar tetap */
@@ -27,16 +33,29 @@ body {
     width: auto;
     position: absolute; /* Logo bisa keluar dari batas navbar jika diperlukan */
 }
+
+.container {
+    display: flex;
+    
+}
 /* Styling untuk div kartu */
-.cards {
+.cards {/* Membuat kartu bisa digeser secara horizontal */
+    padding: 15px;
+    margin: 20px auto; /* Memusatkan div */
+    border-radius: 10px;
+    background: rgba(255, 204, 204);
+    box-shadow: 0 2px 10px #633617;
+    border:  #633617 1px solid;
+    /* box-shadow: 4px -2px 11px 1px #633617; */
+}
+.card-body {
     display: flex;
     overflow-x: auto; /* Membuat kartu bisa digeser secara horizontal */
     padding: 20px;
     margin: 20px auto; /* Memusatkan div */
     border-radius: 10px;
-    background: rgb(255, 204, 204);
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    max-width: 400px; /* Lebar maksimum untuk menampilkan satu kartu */
+    background: rgba(255, 204, 204);
+    max-width: 370px; /* Lebar maksimum untuk menampilkan satu kartu */
     width: 100%; /* Lebar 100% untuk responsif */
 }
 
@@ -73,7 +92,9 @@ body {
     display: flex;
     justify-content: center;
     margin-top: 20px; /* Jarak atas untuk memisahkan tombol dari kartu */
+    font-size: larger;
 }
+
 .play a{
     color: white;
     text-decoration: none;
@@ -106,8 +127,70 @@ button:hover {
 
 .navigationBar {
     display: block; /* Menyembunyikan navigation bar secara default */
+    
 }
 
+::-webkit-scrollbar{
+    display: none;
+}
+
+#url {
+    width: 100%; /* Lebar penuh dari .urlFoto */
+    border-radius: 5px; /* Sudut melengkung input */
+    padding: 20px;
+    border-radius: 10px;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    font-size: 16px;
+    margin: 10px 0;
+    border: none;
+    outline-style: none;
+}
+
+#jwb {
+    width: 100%; /* Lebar penuh dari .urlFoto */
+    border-radius: 5px; /* Sudut melengkung input */
+    padding: 20px;
+    border-radius: 10px;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    font-size: 16px;
+    margin: 10px 0;
+    border: none;
+    outline-style: none;
+}
+
+label {
+    display: block; /* Agar label berada di atas input */
+    margin-bottom: 3px; /* Jarak antara label dan input */
+    color: #333; /* Warna teks label */
+}
+
+.cardsNav {
+    display: flex;
+    overflow-x: auto; /* Membuat kartu bisa digeser secara horizontal */
+    padding: 20px;
+    margin: 20px auto; /* Memusatkan div */
+    border-radius: 10px;
+    background: rgb(255, 204, 204);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    max-width: 400px; /* Lebar maksimum untuk menampilkan satu kartu */
+    width: 100%; /* Lebar 100% untuk responsif */
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 10px #633617;
+    border:  #633617 1px solid;
+}
+
+.addCenter{
+    display: flex;
+    justify-content: center;
+    font-size: large;
+    
+
+}
 /* .navigationBar.active {
     display: block; /* Menampilkan navigation bar saat aktif */
-} */
+
+
+
