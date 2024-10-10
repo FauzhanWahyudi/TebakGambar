@@ -72,7 +72,7 @@ function renderNextImage(id) {
     displayImage.innerHTML = "";
     if(nextId > storageImage.length){
         displayImage.innerHTML +=`<h1 id="finished">
-        <a href="./page1.html" style="
+        <a href="./index.html" style="
   text-decoration: none;">FINISHED</a>
         </h1>`
         return 0;
@@ -81,10 +81,12 @@ function renderNextImage(id) {
         //cari id
         if(storageImage[x].id === nextId){
             displayImage.innerHTML +=`
+            <div class = "card">
                 <div style=" margin: 0 10px;">
                     <!-- masukkan foto gambar yang sudah dimunculkan -->
                     <img src="${storageImage[x].url}" alt="${storageImage[x].id}">
                 </div>
+            </div>
             `
         }
     }
