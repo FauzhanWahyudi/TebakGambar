@@ -81,7 +81,7 @@ function renderNextImage(id) {
         //cari id
         if(storageImage[x].id === nextId){
             displayImage.innerHTML +=`
-                <div class="card">
+                <div style=" margin: 0 10px;">
                     <!-- masukkan foto gambar yang sudah dimunculkan -->
                     <img src="${storageImage[x].url}" alt="${storageImage[x].id}">
                 </div>
@@ -96,7 +96,6 @@ function clickDone(){
     let imageJwb;
     let jawabanUser = document.querySelector('#isiJwb');
     let isiJawabanUser = jawabanUser.value;
-
 
     // console.log(id)
 
@@ -161,4 +160,34 @@ function navigationBar(){
     const Bar = document.querySelector('.navigationBar');
     Bar.classList.toggle('hidup');
 
+    // console.log(id)
+
+    //cari id di gambar
+    let storageImage = JSON.parse(localStorage.getItem('gambar'))
+    // console.log(storageImage)
+    for(let item of storageImage){
+        if(item.id == id){
+            imageJwb = item.jwb
+            break;
+        }
+    }
+    if (imageJwb !== isiJawabanUser){
+        //kalo salah
+        jawabanUser.value = "SALAH !!! Coba Lagi"
+    } else {
+        jawabanUser.value = "BENAR !!! Good Job"
+        let pemain = document.querySelector('h2')
+        let namaPemain = pemain.title;
+        // console.log(pemain.title) //akbar
+
+
+        //cari pemain di data
+        let storagePemain = JSON.parse(localStorage.getItem('pemain'))
+        let pemainIndex = storagePemain.findIndex(obj => obj.name == namaPemain);
+        storagePemain[pemainIndex].point += 1000;
+        
+        sortRank(storagePemain);
+        renderLeaderboard(sortRank(storagePemain));
+    }
+    // console.log(pemain) //IOT aaa
 }
