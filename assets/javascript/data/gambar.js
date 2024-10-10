@@ -55,3 +55,4 @@ if(storageImage === null){
 } else {
     render(storageImage);
 }
+

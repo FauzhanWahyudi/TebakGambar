@@ -60,7 +60,7 @@ sortRank(pemain)
 let leaderboard = document.querySelector('#leaderboard')
 let storagePemain = JSON.parse(localStorage.getItem('pemain'))
 
-function render(array) {
+function renderLeaderboard(array) {
     leaderboard.innerHTML = "";
     for (let x = 0; x < array.length; x++){
         leaderboard.innerHTML +=`
@@ -77,7 +77,7 @@ function render(array) {
 }
 
 if(storagePemain === null){
-    render(pemain)
+    renderLeaderboard(pemain)
 } else {
-    render(storagePemain);
+    renderLeaderboard(storagePemain);
 }
