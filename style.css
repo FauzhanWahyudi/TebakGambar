@@ -15,7 +15,6 @@ body {
 
 /* Desain untuk navigation bar (header) tetap kecil */
 .navBar {
-    background-color:hsla(240, 100%, 50%, 0.129);
     background-image: url(./fotoTebakGambar/222.png);
     box-shadow: 4px  -2px 11px 1px #633617;
     border-bottom: #633617 1px solid;
