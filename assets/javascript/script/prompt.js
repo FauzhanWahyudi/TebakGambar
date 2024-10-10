@@ -22,7 +22,7 @@ function tampilkanNama() {
     // Jika nama ditemukan di Local Storage, tampilkan di <h2>
     if (namaPengguna != null && namaPengguna.trim() !== "") {
         // Mengubah teks dan atribut 'title' di elemen <h2>
-        document.getElementById("greeting").innerHTML = "Selamat Bermain " + namaPengguna;
+        document.getElementById("greeting").innerHTML = "Selamat Bermain " + namaPengguna + " ;]";
         document.getElementById("greeting").setAttribute("title", namaPengguna);
     }
     updatePemain(namaPengguna);

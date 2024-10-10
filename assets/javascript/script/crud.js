@@ -48,10 +48,19 @@ function create() {
     url.value = ""
     jwb.value = ""
     // reRender(dataGambar)
+    
+    cardsNav() //tutup form
+    
 }
 
 
 function clickEdit(id) {
+    //buka form
+    cardsNav() 
+
+
+
+    //start function
     editID = id;
     let result = [];
 
@@ -87,6 +96,7 @@ function clickEdit(id) {
 
 //edit array data, by finding editID, and change object.jwb to newJwb
 function simpanEdit(){
+
     let result = [] //agar tidak menjadi pass by reference
     
     if (storageImage === null) {
@@ -119,11 +129,12 @@ function simpanEdit(){
     localStorage.setItem('gambar', JSON.stringify(result));
     storageImage = [...result]
 
-    let addButton = document.getElementById('addButton')
-    let editButton = document.getElementById('editButton')
+    let addIcon = document.querySelector('#add');
+    let editIcon = document.querySelector('#edit');
     
     addButton.style.display = "block";
     editButton.style.display = "none";
+    cardsNav() //tutup form
 }
 
 //DELETE

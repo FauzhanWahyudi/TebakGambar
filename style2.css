@@ -3,6 +3,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -107,7 +108,7 @@ button:hover {
 .box {
     width: 100%;
     background-color: white;
-    margin-top: 20px;
+    margin-top: 5px;
     /* padding: 15px; */
     border-radius: 10px;
   }
@@ -153,13 +154,20 @@ button:hover {
 
 
   #finished{
-    background: blue;
+    background: #0a8ed0cc;
     color: #c4e4ff;
     border: none;
     padding: 0.8rem;
     cursor: pointer;
     border-radius: 0.4rem;
-    margin-left: 0.4rem;
+  }
+
+  .user {
+    padding: 1rem;
+    text-align: center;
+    width: 100%;
+    color: rgba(0, 17, 170, 0.727);
+    background-color: rgba(45, 127, 221, 0.5);
   }
 
 

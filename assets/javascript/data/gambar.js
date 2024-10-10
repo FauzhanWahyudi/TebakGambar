@@ -19,6 +19,12 @@ let gambar = [
         url: "./fotoTebakGambar/tasik.jpg",
         jwb : "Tasik"
     },
+    {
+        id: 5,
+        url: "https://d3p3fw3rutb1if.cloudfront.net/photos/23d840f9-a3b3-4c74-8174-5acb3789ed39",
+        jwb : "Kopi"
+    },
+   
 ]
 
 
@@ -28,25 +34,32 @@ let storageImage = JSON.parse(localStorage.getItem('gambar'))
 function render(array) {
     imagesList.innerHTML = "";
     for (let x = 0; x < array.length; x++){
-        let perGambar = array[x];
         imagesList.innerHTML +=`
             <div class="card">
                 <div>
                     <!-- masukkan foto gambar yang sudah di munculkan -->
-                    <button onclick="clickEdit(${perGambar.id})" style="background-color: white;"><img src=${perGambar.url} style="max-height:150px;max-width:150px"/></button>
+                    <button onclick="clickEdit(${array[x].id})" style="background-color: white;"><img src=${array[x].url} style="max-height:150px;max-width:150px"/></button>
                 </div>
 
                 <div>
                     <!-- navText untuk hias text output -->
-                    <h3 class="navText">${perGambar.jwb}</h3>
+                    <h3 class="navText">${array[x].jwb}</h3>
                 </div>
               
                 <div>
-                    <button onclick="deleteData(${perGambar.id})" >Delete</button>
+                    <button onclick="deleteData(${array[x].id})" class="delete" >Delete</button>
                 </div>
-            </div>
         `
     }
+
+    imagesList.innerHTML +=
+    `
+    <div>
+        <button id="add" onclick="cardsNav()">+</button>
+    </div>
+
+    </div>
+    `
 }
 
 if(storageImage === null){
@@ -57,3 +70,35 @@ if(storageImage === null){
     render(storageImage);
 }
 
+function cards(){
+    const Bar = document.querySelector('.cards');
+    Bar.classList.toggle('short');
+}
+
+function navigationBar(){
+    const Bar = document.querySelector('.navigationBox');
+    Bar.classList.toggle('hidup');
+}
+
+
+function cardsNav(){
+    cards();
+    const Bar = document.querySelector('.cardsNav');
+    Bar.classList.toggle('active');
+
+    
+    let url = document.getElementById('url');
+    url.value = "";
+    url.placeholder="Ketik URL Gambar Anda"
+
+    let jwb = document.getElementById('jwb');
+    jwb.value = "";
+    jwb.placeholder="Ketik Nama Gambar Anda"
+
+    
+    let addButton = document.getElementById('addButton')
+    let editButton = document.getElementById('editButton')
+    
+    addButton.style.display = "block";
+    editButton.style.display = "none";
+}
