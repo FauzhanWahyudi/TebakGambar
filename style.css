@@ -108,6 +108,6 @@ button:hover {
     display: block; /* Menyembunyikan navigation bar secara default */
 }
 
-/* .navigationBar.active {
+.navigationBar.active {
     display: block; /* Menampilkan navigation bar saat aktif */
-} */
+}

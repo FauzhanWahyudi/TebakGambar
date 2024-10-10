@@ -10,6 +10,7 @@
         .container {
             text-align: center;
         }
+        
 
         /* Memusatkan cards dan elemen-elemen lainnya */
         .cards {
@@ -18,7 +19,7 @@
             margin-bottom: 20px;
         }
 
-        .card1, .card2, .card3 {
+        .card {
             margin: 0 10px;
         }
 
@@ -44,35 +45,58 @@
             <!-- Logo Games, ditaruh di center -->
             <img src="./fotoTebakGambar/Logo.png" alt="Logo Game">
         </header>
-        <h2 title="Jenny Holland">
-            Selamat Bermain Jenny Holland
+
+
+        <div class="navigation">
+            <div class="navigationIcon" onclick="navigationBar();">
+              <img src="./fotoTebakGambar/Logo.png">
+            </div>
+            <div class="navigationBar">
+              <ul>
+                <li><a href="./page1.html">HOME</a></li>
+                <li><p></p></li>
+                <li><a href="#leaderboard">LEADERBOARD</a></li>
+              </ul>
+            </div>
+        </div>
+
+
+        <h2 id="greeting" title="nama">
+            Selamat Bermain
         </h2>
         <!-- page 2 main game, didesain dengan isi jawaban, random foto dan button kumpulin -->
         <div>
             <!-- class "cards" untuk mendesain background navigation page 1 & membuat card nya bisa bergeser -->
             <div class="cards">
                 <!-- class="card" untuk membuat desain background dan hias perCardnya -->
-                <div class="card1">
+                <!-- <div class="card"> -->
                     <!-- masukkan foto gambar yang sudah dimunculkan -->
-                    <img src="./fotoTebakGambar/jambi.jpg" alt="1">
-                </div>
-
+                    <!-- <img src="./fotoTebakGambar/jambi.jpg" alt="1">
+                </div> -->
             </div>
+
             <div>
                 <!-- input untuk isi jawaban -->
                 <input type="text" id="isiJwb" placeholder="Isi disini...">
             </div>
+
             <div>
                 <!-- button untuk submit jawaban -->
-                <button type="doneButton" onclick="clickDone()">Done</button>
+                <button id="doneButton" onclick="clickDone()">Done</button>
+                <button id="lanjutButton" onclick="lanjut()" style="display:none">Lanjut</button>
             </div>
         </div>
     </div>
 
-    <ul id="leaderboard">
+    <div class="lead-container">
+        <div class="box">
+            <h2>LeaderBoard</h2>
+            <ul id="leaderboard"></ul>
+        </div>
+    </div>
 
-    </ul>
-
+    <!-- <script src="./assets/javascript/data/indexpemain.js"></script> -->
     <script src="./assets/javascript/data/pemain.js"></script>
+    <script src="./assets/javascript/script/prompt.js"></script>
 </body>
 </html>
