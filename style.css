@@ -257,6 +257,7 @@ label {
 
 .navigation .navigationBox.hidup{
   position: absolute;
+  z-index:-1;
   top: 40px;  
   background: #e0e7ff;
   right: -10px;
