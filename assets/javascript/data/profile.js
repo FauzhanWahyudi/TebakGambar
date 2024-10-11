@@ -1,38 +1,38 @@
 let profile = [
     {
         id: 1,
+        url: "./fotoTebakGambar/surabaya.jpg",
+        nama : "Nur Haliza",
+        role : "Front End Developer",
+        github: "https://github.com/nrlizahh"
+    },
+    {
+        id: 2,
+        url: "./fotoTebakprofile/jambi.jpg",
+        nama : "Togi Sagala",
+        role : "Front End Developer",
+        github: "https://github.com/togi080204"
+    },
+    {
+        id: 3,
         url: "./assets/images/fotoProfile/fauzhanwahyudi.jpg",
         nama : "Fauzhan Wahyudi",
         role : "Back End Developer",
         github: "https://github.com/FauzhanWahyudi"
     },
     {
-        id: 2,
-        url: "./fotoTebakprofile/jambi.jpg",
-        nama : "Jambi",
-        role : "Back End Developer",
-        github: "https://github.com/FauzhanWahyudi"
-    },
-    {
-        id: 3,
-        url: "./fotoTebakprofile/surabaya.jpg",
-        nama : "Surabaya",
-        role : "Back End Developer",
-        github: "https://github.com/FauzhanWahyudi"
-    },
-    {
         id: 4,
         url: "./fotoTebakprofile/tasik.jpg",
-        nama : "Tasik",
+        nama : "Yafi Irfan Zuhdi",
         role : "Back End Developer",
-        github: "https://github.com/FauzhanWahyudi"
+        github: "https://github.com/yafiirfan"
     },
     {
         id: 5,
         url: "https://d3p3fw3rutb1if.cloudfront.net/photos/23d840f9-a3b3-4c74-8174-5acb3789ed39",
-        nama : "Kopi",
+        nama : "Khaizuran",
         role : "Back End Developer",
-        github: "https://github.com/FauzhanWahyudi"
+        github: "https://github.com/onekhai"
     },
    
 ]
@@ -76,5 +76,6 @@ function navigationBar(){
 function openGithub(id){
     let profiles = [...profile];
     let profileIndex = profiles.findIndex(obj => obj.id == id);
-    window.location.href = `${profiles[profileIndex].github}`;
+    // window.location.href = `${profiles[profileIndex].github}`;
+    window.open(`${profiles[profileIndex].github}`, '_blank').focus();
 }
