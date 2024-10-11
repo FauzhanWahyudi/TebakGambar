@@ -10,12 +10,23 @@ function ubahNama() {
         // Mengarahkan ke halaman berikutnya (page2.html)
         window.location.href = "./page2.html";
     } else {    
-        let alert = prompt("Apakah ingin menggunakan akun sebelumnya? Ya / Tidak", "Tidak");
-        if (alert.toLowerCase() === "ya") {    
-        //     // Mengarahkan ke halaman berikutnya (page2.html)
+        let cek = prompt("Apakah ingin menggunakan akun sebelumnya? Ya / Tidak", "Tidak");
+        if (cek.toLowerCase() === "ya") {
+            // Mengarahkan ke halaman berikutnya (page2.html)
+
+            //cek apakah nama sebelumnya ada
+             let namaPengguna = localStorage.getItem("namaPengguna");
+    
+            // Jika nama ditemukan di Local Storage
+            if (namaPengguna == null || namaPengguna.trim() == "") { //tadi lupa pake or
+                alert("Mohon maaf anda player baru, tolong masukkan nama terlebih dahulu"); //tadi error karena sebelumnya udh deklarasi alert
+                return 0;
+            } 
+            
             window.location.href = "./page2.html";
-        } else {
-            window.location.href = "./index.html";
+            
+        } else if(cek.toLowerCase() === "tidak" || alert == null){
+            return 0;
         }
     }
 }

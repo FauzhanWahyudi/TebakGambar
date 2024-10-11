@@ -21,7 +21,8 @@
         </div>
         <div class="navigationBox">
           <ul>
-            <li><a href="./page2.html" onclick="ubahNama()">PLAY</a></li>
+            <!-- sebelumnya error karena di tag <a></a> udh ada href -->
+            <li><a style ="color:#551b8c" onclick="ubahNama()" class="playButton">PLAY</a></li>
             <li><p></p></li>
             <li><a href="./page2.html#leaderboard">LEADERBOARD</a></li>
           </ul>
@@ -61,7 +62,7 @@
 
         <!-- button mulai game dan akan pindah ke page2 -->
         <div class="play">
-            <button onclick="ubahNama()"><a href="./page2.html">PLAY</a></button>
+            <button class="playButton" onclick="ubahNama()">PLAY</button>
         </div>
 
     </div>
