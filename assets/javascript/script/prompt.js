@@ -9,6 +9,14 @@ function ubahNama() {
 
         // Mengarahkan ke halaman berikutnya (page2.html)
         window.location.href = "./page2.html";
+    } else {    
+        let alert = prompt("Apakah ingin menggunakan akun sebelumnya? Ya / Tidak", "Tidak");
+        if (alert.toLowerCase() === "ya") {    
+        //     // Mengarahkan ke halaman berikutnya (page2.html)
+            window.location.href = "./page2.html";
+        } else {
+            window.location.href = "./index.html";
+        }
     }
 }
 

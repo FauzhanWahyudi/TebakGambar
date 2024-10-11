@@ -99,6 +99,11 @@ function clickDone(){
     let jawabanUser = document.querySelector('#isiJwb');
     let isiJawabanUser = jawabanUser.value;
 
+    if(!jawabanUser.value){
+        alert("Tolong Isi Jawaban");
+        return 0;
+    }
+
     // console.log(id)
 
     //cari id di gambar

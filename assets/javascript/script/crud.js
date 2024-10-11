@@ -19,6 +19,12 @@ function create() {
     let jwbValue = jwb.value;
     // console.log(jwbValue);
 
+    //validasi
+    if(!urlValue || !jwbValue){
+        alert("Tolong menuliskan URL dan Nama dengan Benar");
+        return 0;
+    }
+
     let result = [];
     let newId;
 
@@ -110,6 +116,11 @@ function simpanEdit(){
     
     let jwb = document.getElementById('jwb');
     let jwbValue = jwb.value;
+
+    if(!urlValue || !jwbValue){
+        alert("Tolong menuliskan URL dan Nama dengan Benar");
+        return 0;
+    }
     
     for(let x = 0; x < result.length; x++){
         //cari yang id sama
