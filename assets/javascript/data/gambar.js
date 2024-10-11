@@ -33,6 +33,22 @@ let storageImage = JSON.parse(localStorage.getItem('gambar'))
 
 function render(array) {
     imagesList.innerHTML = "";
+    let isLeft = false;
+
+    if(array.length > 3){
+        //kalo data banyak, plus pundah ke kiri (awal)
+        isLeft = true;
+    }
+
+    if(isLeft){
+        //add (+) button to first (left)
+        imagesList.innerHTML +=
+        `
+        <div class="card">
+            <button id="add" onclick="cardsNav()">+</button>
+        </div>
+        `
+    }
     for (let x = 0; x < array.length; x++){
         imagesList.innerHTML +=`
             <div class="card">
@@ -49,17 +65,19 @@ function render(array) {
                 <div>
                     <button onclick="deleteData(${array[x].id})" class="delete" >Delete</button>
                 </div>
+            </div>
         `
     }
 
+    if(!isLeft){
+    //add (+) button to last (rigt)
     imagesList.innerHTML +=
     `
-    <div>
+    <div class="card">
         <button id="add" onclick="cardsNav()">+</button>
     </div>
-
-    </div>
     `
+    }
 }
 
 if(storageImage === null){
