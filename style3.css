@@ -88,11 +88,13 @@ body {
     align-items: center;
     position: relative;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
 }
 
 .card img {
     max-width: 100%; /* Gambar akan menyesuaikan dengan lebar kartu */
     border-radius: 8px 8px 0 0; /* Membuat sudut atas kartu melengkung */
+    cursor: pointer;
 }
 
 .cards h1{

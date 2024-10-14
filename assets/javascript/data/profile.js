@@ -8,7 +8,7 @@ let profile = [
     },
     {
         id: 2,
-        url: "./fotoTebakprofile/jambi.jpg",
+        url: "./assets/images/fotoProfile/togi.jpg",
         nama : "Togi Sagala",
         role : "Front End Developer",
         github: "https://github.com/togi080204"
@@ -22,7 +22,7 @@ let profile = [
     },
     {
         id: 4,
-        url: "./fotoTebakprofile/tasik.jpg",
+        url: "./assets/images/fotoProfile/yafi.jpg",
         nama : "Yafi Irfan Zuhdi",
         role : "Back End Developer",
         github: "https://github.com/yafiirfan"
@@ -44,10 +44,10 @@ function render(array) {
     profileList.innerHTML = "";
     for (let x = 0; x < array.length; x++){
         profileList.innerHTML +=`
-            <div class="card">
+            <div class="card" onclick="openGithub(${array[x].id})" >
                 <div>
                     <!-- masukkan foto profile yang sudah di munculkan -->
-                    <button onclick="openGithub(${array[x].id})" style="background-color: white;"><img src=${array[x].url} style="max-height:150px;max-width:150px"/></button>
+                    <button style="background-color: white;"><img src=${array[x].url} style="max-height:150px;max-width:150px"/></button>
                 </div>
 
                 <div>

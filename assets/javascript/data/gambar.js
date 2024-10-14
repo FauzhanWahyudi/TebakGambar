@@ -59,7 +59,7 @@ function render(array) {
 
                 <div>
                     <!-- navText untuk hias text output -->
-                    <h3 class="navText">${array[x].jwb}</h3>
+                    <h3 class="navText" onclick="clickEdit(${array[x].id})">${array[x].jwb}</h3>
                 </div>
               
                 <div>
