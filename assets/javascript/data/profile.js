@@ -2,7 +2,7 @@ let profile = [
     {
         id: 1,
         url: "./fotoTebakGambar/surabaya.jpg",
-        nama : "Nur Haliza",
+        nama : "Nur Halizah",
         role : "Front End Developer",
         github: "https://github.com/nrlizahh"
     },
@@ -30,7 +30,7 @@ let profile = [
     {
         id: 5,
         url: "https://d3p3fw3rutb1if.cloudfront.net/photos/23d840f9-a3b3-4c74-8174-5acb3789ed39",
-        nama : "Khaizuran",
+        nama : "Arya Khaizuran",
         role : "Back End Developer",
         github: "https://github.com/onekhai"
     },
